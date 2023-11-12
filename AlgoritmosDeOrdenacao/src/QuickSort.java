@@ -1,11 +1,17 @@
 import java.util.Arrays;
 
 public class QuickSort {
+    private static int iterationCount = 1;
+
     public static void sort(int[] arr, int low, int high) {
         if (low < high) {
             int pi = partition(arr, low, high);
 
-            System.out.println("Iteração do Quick Sort - Pivô: " + arr[pi] + ": " + Arrays.toString(arr));
+            //A escolha do pivô é feita escolhendo o elemento mais a direita da sub-lista que está sendo ordenada a cada iteração.
+
+            System.out.println("Iteração do Quick Sort " + iterationCount + " - Pivô: " + arr[pi] + ": " + Arrays.toString(arr));
+
+            iterationCount++;
 
             sort(arr, low, pi - 1);
             sort(arr, pi + 1, high);
