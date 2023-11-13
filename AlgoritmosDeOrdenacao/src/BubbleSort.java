@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class BubbleSort {
     public static void sort(int[] arr) {
         int n = arr.length;
+        System.out.println("BUBBLE SORT:\n");
         for (int i = 0; i < n-1; i++) {
             for (int j = 0; j < n-i-1; j++) {
                 if (arr[j] > arr[j+1]) {
@@ -13,6 +14,6 @@ public class BubbleSort {
             }
             System.out.println("Iteração do Bubble Sort " + (i + 1) + ": " + Arrays.toString(arr));
         }
-        System.out.println("Resultado final do Bubble Sort: " + Arrays.toString(arr));
+        System.out.println("\nResultado final do Bubble Sort: " + Arrays.toString(arr) + "\n");
     }
 }

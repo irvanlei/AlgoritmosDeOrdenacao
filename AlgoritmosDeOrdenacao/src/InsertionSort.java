@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class InsertionSort {
     public static void sort(int[] arr) {
         int n = arr.length;
+        System.out.println("INSERTION SORT:\n");
         for (int i = 1; i < n; ++i) {
             int key = arr[i];
             int j = i - 1;
@@ -14,6 +15,6 @@ public class InsertionSort {
             arr[j + 1] = key;
             System.out.println("Iteração do Insertion Sort " + i + ": " + Arrays.toString(arr));
         }
-        System.out.println("Resultado final do Insertion Sort: " + Arrays.toString(arr));
+        System.out.println("\nResultado final do Insertion Sort: " + Arrays.toString(arr) + "\n");
     }
 }
